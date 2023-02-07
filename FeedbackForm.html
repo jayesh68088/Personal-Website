@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>FEEDBACK FORM</title>
+    <style>
+		 input[type=text]:focus {
+  
+}
+	body{
+		color :Teal;
+		background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCk0IZ8e1OP2FteZyx7OYD2dG-qZN_0cGKVQ&usqp=CAU');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+	}
+    label{
+        width: 120px;
+        display: inline-block;
+    }
+    
+    .f1{
+        border: 5px solid rgb(36, 194, 230);
+        border-radius: 10px;
+        margin: auto;
+        max-width: 700px;
+        padding: 10px;
+        ;
+    }
+    #radio{
+        margin-left: 70px;
+    }
+		
+	legend {
+color: DeepPink;
+}
+   
+    .rate {
+  color: orange;}
+}
+    </style>
+</head>
+<body>
+	<script>
+function validate()
+{
+fname=document.getElementById("nm").value;
+lname=document.getElementById("mn").value;
+smobile=document.getElementById("mb").value;
+saddress=document.getElementById("add").value;
+semail=document.getElementById("em").value
+scomment=document.getElementById("cm").value;
+
+if(fname==""||lname==""||smobile==""||saddress==""||semail==""||scomment=="")
+{
+alert("Fields should not be empty");
+return false;
+}
+else if(!fname.match(/^[A-Za-z]+$/))
+{
+alert("Name should contain only characters")
+return false;
+}
+else if(!lname.match(/^[A-Za-z]+$/))
+{
+alert("Name should contain only characters")
+return false;
+}
+else if(!semail.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/))
+{
+alert("Invalid email address!")
+return false;
+}
+else if(!smobile.match(/^\d{10}$/))
+{
+alert("Mobile number Not valid")
+return false;
+}
+alert("Valid");
+return false;
+}
+</script>
+    <h2 align=center >PERSONAL FEEDBACK</h2>
+    
+		<fieldset>    
+<legend>     Your Details:    </legend>    
+       <form action="">
+           <label for="">First Name:</label>  <input type="text" name=txtfname id=nm>
+           <label for="">Last name:</label>  <input type="text" name=txtlname id=mn><br>
+           <label for="">Address :</label> <input type="text" name=txtsaddress id=add><br>
+           <label for="">Email :</label> <input type="text"  name=txtsemail id=em><br>
+           <label for="">Telephone :</label> <input type="text" name=txtSmobile id=mb><br>
+           <br>
+           <label for="">University:</label> <select name="" id="">
+               <option value="">Amrita</option>
+               <option value="">VIT</option>
+               <option value="">SRM</option>
+               <option value="">BITS</option>
+           </select><br>
+           <label for="">Date of birth: </label><input type="datetime-local"><br>
+           
+           <label for="">Interested in :</label>
+           <div id="radio">
+            <input type="radio" name="sys">Programming<br>
+            <input type="radio" name="sys">Gaming<br>
+            <input type="radio" name="sys">Web Development<br>
+            <input type="radio" name="sys">Boost Rankings<br>
+           </div> 
+           </fieldset>
+           <BR>
+           <fieldset>    
+<legend>     Your Review:    </legend>
+           <label for="">Rating (To My Website):</label>
+         <div id="radio">
+	     <input type="checkbox" name="sys" id="">
+	     <span class="fa fa-star rate"></span>
+	     <span class="fa fa-star rate"></span>
+	     <span class="fa fa-star rate"></span>
+	     <span class="fa fa-star rate"></span>
+	     <span class="fa fa-star rate"></span><br>
+         <input type="checkbox" name="sys" id="">
+         <span class="fa fa-star rate"></span>
+	     <span class="fa fa-star rate"></span>
+	     <span class="fa fa-star rate"></span>
+	     <span class="fa fa-star rate"></span><br>
+         <input type="checkbox" name="" id="">
+         <span class="fa fa-star rate"></span>
+	     <span class="fa fa-star rate"></span>
+	     <span class="fa fa-star rate"></span><br>
+         <input type="checkbox" name="" id="">
+         <span class="fa fa-star rate"></span>
+	     <span class="fa fa-star rate"></span><br>
+         
+         <br>
+         <label for="hear-about">      
+How did you hear about us?     
+</label>  
+         <select name="referrer" id="hear-about">      
+			 <option value="google">Google</option>      
+			 <option value="friend">Friend</option>      
+			 <option value="advert">Advert</option>      
+			 <option value="other">Other</option>
+			 </select>
+			 <br>
+			 <br>
+         <label for="">Comments and Queries :</label><br>
+          <textarea rows="4" cols="50" name="comment" form="usrform" name=txtscomment id=cm></textarea>
+            <br>
+            <BR>
+            <div class="container">
+             <div class="center">
+          &emsp;&emsp;&emsp;&emsp;<button align ="center" name="submit" value="Submit" onClick="return validate()">Submit</button>  
+        &emsp;<button align ="center" name="submit" value="Submit">Reset</button>
+        </div>
+        </form> 
+    </div>
+    </fieldset>
+</body>
+</html>

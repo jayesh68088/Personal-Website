@@ -1,0 +1,5 @@
+CHANGES MADE TO MY WEBSITE :
+
+1.I have changed the landscape of my personal website with hyperlinks(internal linking) and included a clock timer using javascript.
+2.I have included javascript concepts in my Feedback Form.
+3.I have added cookies to my ALBUM.html file using javascript.
